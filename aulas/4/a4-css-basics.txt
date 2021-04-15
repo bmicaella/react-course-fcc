@@ -1,0 +1,7 @@
+--- CSS BASICS ---
+
+basically you have to do just one thing at the app file or whatever react file youre using: 
+
+    import "./index.css";
+
+    make sure to check where your file is located, otherwise it wont work

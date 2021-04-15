@@ -1,0 +1,14 @@
+//rfc == creates a regular component with import, function and export
+
+import React from "react";
+import ReactDom from "react-dom"; //imports the render part
+
+function Greeting() {
+  return (
+    <div>
+      <h1>Hello world.</h1>
+    </div>
+  );
+}
+
+ReactDom.render(<Greeting />, document.querySelector("#root"));

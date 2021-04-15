@@ -1,0 +1,13 @@
+--- JSX JAVASCRIPT ---
+
+- you cant pass a statement in an object
+    example:
+        const Album = () => {
+            const title = 'The Most Beautiful Moment In Life PT. 2'
+            return (
+                <article>
+                <h1>{title}</h1>
+                <p> {let x = 6} </p> // this wont allow the file to compile
+                </article>
+            )
+        }

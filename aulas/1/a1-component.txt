@@ -1,0 +1,31 @@
+--- CREATING COMPONENTS ---
+
+__FUNCTIONS
+
+    * OP1 *
+    function Greeting() { //stateless functional component => always return JSX
+    //jsx
+    //when creating a component, you need to capitalize the first letter, otherwise react will read it as a html component, such as div or h1
+        return <h1>this is micaella and yes, this is my first component</h1>;
+    }
+
+__ARROW __FUNCTIONS
+
+    * OP1 *
+    const Greeting = () => {
+    //arrow function
+        return React.createElement("h2", {}, "hello worldd");
+    };
+
+    * OP2 *
+    const Greeting = () => { //this would be much more complicated, so its better to just use the normal function instead of the arrow one when creating intricate html components
+        return React.createElement(
+        "div",
+        {},
+        React.createElement("h1", {}, "hello world")
+        );
+    };
+
+__RENDER
+
+    ReactDom.render(<Greeting />, document.querySelector("#root")); //looks for what you want to render (greeting) AND where it is supposed to render (div root)

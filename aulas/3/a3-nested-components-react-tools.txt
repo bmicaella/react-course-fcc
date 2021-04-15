@@ -1,0 +1,25 @@
+--- NESTED COMPONENTS ---
+
+you have one main component, which is usually called App(). inside the app, you call all the other existing components. so, the app is your main, and inside your main you can call for example, contact page, about us, social media, idk, whatever you want!
+
+    example:
+
+        function Greeting() {
+            return (
+                <div>
+                <Person />
+                <Lyrics />
+                </div>
+            );
+        }
+
+        const Person = () => <h1>doja cat, babe</h1>; //implicit return
+
+        const Lyrics = () => { //explicit return
+            return <p>just like that, come my way</p>;
+        };
+
+    
+    - you can have even more components inside the nested components
+
+--- REACT TOOLS ---

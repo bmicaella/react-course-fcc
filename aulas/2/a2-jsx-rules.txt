@@ -1,0 +1,78 @@
+--- JSX RULES ---
+
+1ST => you can only return single elements
+
+    example:
+
+        function Greeting() {
+            return (
+                <div> 
+                    <h2> something </h2>
+                </div>
+                <div> 
+                    <h3> something something </h3>
+                </div>
+            )
+        }
+
+    this wont work because youre returning more than one element (two divs, to be specific)
+
+    SOLUTIONS
+
+    - use the correct html semantics: is it a section? than use the section tag. 
+    - use the React.Fragment tag and put the content inside: this way you can use more than one element
+        <React.Fragment> content </React.Fragment>
+    - use the fragment 'element' and put the content inside it
+        <> content </>
+
+2ND => use camelCase for html attributes
+
+    example:
+
+        <div onClick="">
+
+    if you were typing a html document you would use the attribute onclick="", but as you are typing a jsx file you should use js rules, so onclick becomes onClick
+
+3RD => use className, not class
+
+    if you use class, react wont recognize it and will throw you an error. use className instead.
+
+    example:
+
+        <div className="stuff"> content </div>
+4TH => you have to close every element
+
+    even elements that normally in html wouldnt need a closing tag, in react they need them
+
+    example:
+
+        <img src="" alt=""/> //in html the img tag does not close
+
+5TH => formatting
+
+    if you dont use the () in the return part, but you type the element in the next line, whatever that you type wont show in the localhost, it will throw an error saying that it failed to compile
+
+    example:
+
+        * CORRECT *
+        function Greeting() {
+            return (
+                <div> 
+                    <h2> something </h2>
+                </div>
+            )
+        }
+
+        function Greeting() { //NOT THE BEST OPTION. USE THE PARENTHESISS
+            return <div> 
+                    <h2> something </h2>
+                </div>
+        }
+
+        * INCORRECT *
+        function Greeting() {
+            return
+                <div> 
+                    <h2> something </h2>
+                </div>
+        }

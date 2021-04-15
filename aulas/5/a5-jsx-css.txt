@@ -1,0 +1,9 @@
+--- JSX CSS ---
+
+- its basically using the style attribute in the jsx elements such as h1, div, section
+- pay attention to the settings name, you cant write font-size, you have to capitalize so it should be fontSize
+- inline style its more 'powerful' than css file style, so pay attention to that
+
+    example:
+
+        const Title = () => <h1 style={ { color: '#fff', fontSize: '0.75rem', backgroundColor: 'aquamarine' }}> Título </h1>

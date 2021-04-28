@@ -7,8 +7,8 @@ you have one main component, which is usually called App(). inside the app, you 
         function Greeting() {
             return (
                 <div>
-                <Person />
-                <Lyrics />
+                    <Person />
+                    <Lyrics />
                 </div>
             );
         }

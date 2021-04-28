@@ -1,0 +1,72 @@
+--- PROPS DESTRUCTURING + PROPS CHILDREN ---
+
+-- PROPS DESTRUCTURING
+instead of using the 'props.nameOfProp' you can destruct the info and just call the attribute name
+    example: 
+
+    *** WITH DESTRUCTURING ***
+    const Album = (props) => {
+        const { img, title, artist } = props
+        return (
+            <article className="album">
+            <img
+                className="imgAlbum"
+                src={img}
+                alt="The Most Beautiful Moment in Life PT. 2"
+            />
+            <h1>{title}</h1>
+            <h3>{artist.toUpperCase()}</h3>
+            </article>
+        )
+    }
+
+    *** WITHOUT DESTRUCTURING ***
+    const Album = (props) => {
+        return (
+            <article className="album">
+            <img
+                className="imgAlbum"
+                src={props.img}
+                alt="The Most Beautiful Moment in Life PT. 2"
+            />
+            <h1>{props.title}</h1>
+            <h3>{props.artist.toUpperCase()}</h3>
+            </article>
+        )
+    }
+
+you can also just pass the props object through the parameters 
+    example:
+
+    const Album = ({ img, title, artist }) => {
+        ...
+    }
+
+    - if  one of the parameters was an object you could still use this, it just would look like this:
+        example: 
+
+        const Album = ({ img, title: { something something } })
+
+--PROPS CHILDREN
+
+everything that goes inside the jsx element or component 
+    example:
+
+     <Album
+        title={firstAlbum.title}
+        artist={firstAlbum.artist}
+        img={firstAlbum.img}
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+          dolorem?
+        </p>
+      </Album>
+
+      const Album = ({} ) => {
+          return (
+                <article>
+                    {children}
+                <article>
+          )
+      }

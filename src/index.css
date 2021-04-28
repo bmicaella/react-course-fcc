@@ -5,8 +5,8 @@
 
 body {
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: linear-gradient(75deg, rgb(146, 145, 238), rgb(141, 242, 215));
   background-repeat: fixed;
   color: black;
@@ -18,6 +18,8 @@ body {
   margin: 5rem auto;
   display: grid;
   gap: 2rem;
+  text-align: center;
+  align-items: start;
 }
 
 .imgAlbum {
@@ -42,6 +44,10 @@ body {
   font-size: 0.9rem;
   margin-top: 0.3rem;
   color: rgb(114, 165, 165);
+}
+
+.album p {
+  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {

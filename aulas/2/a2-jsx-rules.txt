@@ -40,13 +40,15 @@
     example:
 
         <div className="stuff"> content </div>
+
 4TH => you have to close every element
 
     even elements that normally in html wouldnt need a closing tag, in react they need them
 
     example:
 
-        <img src="" alt=""/> //in html the img tag does not close
+        <img src="" alt=""/> 
+        //in html the img tag does not close
 
 5TH => formatting
 

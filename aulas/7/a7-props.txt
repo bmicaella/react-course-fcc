@@ -1,0 +1,10 @@
+--- PROPS ---
+
+- props are properties that can be passed around in react
+- props are passed like function arguments
+    example:
+        const Album = (props) => {
+            something
+        }
+- they are passed to components in one way only: from parent to child
+- props data does not change. its read only content

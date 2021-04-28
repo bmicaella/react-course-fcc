@@ -1,0 +1,45 @@
+--- PROPS LIST ---
+
+*** PROPS ***
+
+1st you create an array that has all the info you need. in this case:
+    example:
+
+    const albums = [
+        {
+            id: 1,
+            title: 'The Most Beautiful Moment In Life PT. 2',
+            artist: 'Bangtan Sonyeondan',
+            img:
+            'https://upload.wikimedia.org/wikipedia/pt/8/8f/The_Most_Beautiful_Moment_in_Life%2C_Part_2_-_%28EP%29.jpg',
+        }
+    ]
+
+
+then, inside the element that has the list you map that info so you have access to all properties (even if youre not using all of them), using the map method
+    example:
+
+    function AlbumList() {
+        return (
+            <section className="albumlist">
+            {albums.map((album) => {
+                return <Album key={album.id} album={album}></Album>
+            })}
+
+
+for last you pass the props as a parameter and you access then creating a new object that gets that info from inside the album property that we declared before. the 'album' property can have any name whatsover, it just has to match the name thats on the next item
+
+    example:
+
+    const Album = (props) => {
+        const { title, artist, img } = props.album
+        return (
+            <article className="album">
+                <img className="imgAlbum" src={img} alt={title} />
+                <h1>{title}</h1>
+                <h3>{artist}</h3>
+            </article>
+        )
+    }
+
+*** SPREAD OPERATOR ***
